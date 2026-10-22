@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин «Копеечка» возле ПГЭК в Полоцке</title>
+    <style>
+        :root {
+            --primary-color: #e30613; /* Фирменный красный цвет Копеечки */
+            --secondary-color: #f9a825; /* Акцентный желтый */
+            --text-color: #333;
+            --bg-color: #f4f6f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            header p {
+                margin: 0.5rem 0 0 0;
+                font-size: 1.1rem;
+                opacity: 0.9;
+            }
+
+        main {
+            flex: 1;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-block {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+            .info-block:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+        .label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #777;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+            .value a {
+                color: var(--primary-color);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+                .value a:hover {
+                    color: #b3000b;
+                    text-decoration: underline;
+                }
+
+        .btn-call {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .btn-call:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+                color: #000;
+            }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #888;
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Магазин «Копеечка»</h1>
+        <p>Филиал в г. Полоцке (рядом с Экономическим колледжем)</p>
+    </header>
+
+    <main>
+        <div class="info-block">
+            <span class="label">Адрес магазина:</span>
+            <div class="value">
+                г. Полоцк, проспект Франциска Скорины, 17/6<br>
+                <span style="font-size: 1rem; font-weight: normal; color: #555;">
+                    (всего 200 метров от главного корпуса ПГЭК)
+                </span>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Номер телефона (Инфолиния):</span>
+            <div class="value">
+                <a href="tel:+375291447000">+375 (29) 144-70-00</a>
+            </div>
+            <a href="tel:+375291447000" class="btn-call">Позвонить в магазин</a>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Время работы:</span>
+            <div class="value" style="font-size: 1.1rem; font-weight: normal;">
+                Ежедневно: с 09:00 до 22:00
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Сайт-визитка филиала торговой сети «Копеечка». Все права защищены.
+    </footer>
+
+</body>
+</html>
