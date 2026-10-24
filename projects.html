@@ -3,49 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Проекты разработчиков</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-
-        .developer {
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .project-name {
-            font-weight: bold;
-            color: #2980b9;
-        }
-    </style>
+    <!-- Подключаем внешний файл стилей -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <h1>Портфолио команды</h1>
 
+    <!-- НОВЫЙ ПРОЕКТ С ПРЕЗЕНТАЦИЕЙ -->
+    <div class="developer new-project">
+        <h2>Проект: Веб-приложение «Копеечка Доставка» <span class="new-badge">NEW</span></h2>
+        <p><strong>Описание:</strong> Новый сервис для заказа продуктов онлайн с быстрой доставкой на дом. Проект включает в себя личный кабинет пользователя и панель администратора для сборки заказов.</p>
+        <p><strong>Статус:</strong> В разработке.</p>
+
+        <!-- Ссылка на скачивание презентации -->
+        <a href="presentation.pdf" class="download-btn" download>📥 Скачать презентацию проекта (PDF)</a>
+    </div>
+
     <!-- Разработчик 1 -->
     <div class="developer">
         <h2>Янусов Даниил (Frontend-разработчик)</h2>
-        <p>Проекты, которые она сделала:</p>
+        <p>Проекты, которые он сделал:</p>
         <ul>
             <li><span class="project-name">Сайт магазина «Копеечка»</span> — верстка главной страницы и каталога товаров.</li>
             <li><span class="project-name">Дизайн-система</span> — создание библиотеки UI-компонентов для внутренних проектов.</li>

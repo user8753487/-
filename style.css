@@ -1,0 +1,77 @@
+/* Общие настройки страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Карточки разработчиков */
+.developer {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #3498db; /* Синяя полоска слева */
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+ul {
+    margin-top: 10px;
+    list-style-type: square;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.project-name {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Стили для НОВОГО проекта (выделяем красным) */
+.new-project {
+    border-left: 5px solid #e74c3c; /* Красная полоска */
+    background-color: #fffdfd;
+}
+
+.new-badge {
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Стили для кнопки скачивания */
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27ae60; /* Зеленая кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .download-btn:hover {
+        background-color: #219150; /* Темнеет при наведении */
+    }
