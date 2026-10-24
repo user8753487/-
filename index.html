@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Копеечка - Сеть магазинов</title>
+    <title>Kopeechka - Store Network</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-red: #cc1616; /* Фирменный красный */
-            --brand-yellow: #fce116; /* Фирменный желтый */
+            --brand-red: #cc1616; /* Brand red */
+            --brand-yellow: #fce116; /* Brand yellow */
             --text-dark: #222;
             --text-light: #f4f4f4;
             --bg-color: #f8f9fa;
@@ -27,25 +27,31 @@
             min-height: 100vh;
         }
 
-        /* Шапка сайта */
+        /* ===== Header block ===== */
         header {
             background-color: var(--brand-red);
             padding: 1.5rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             border-bottom: 5px solid var(--brand-yellow);
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            background-color: var(--brand-red); /* На случай если прозрачный png */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+
 
         .site-title {
             font-family: 'Montserrat', sans-serif;
@@ -58,7 +64,43 @@
             text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
         }
 
-        /* Основной контент */
+        .college-name {
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0.3rem 0 0 0;
+            opacity: 0.95;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+            .main-nav a:hover {
+                color: var(--brand-yellow);
+                border-bottom-color: var(--brand-yellow);
+            }
+
+        /* ===== Main content ===== */
         main {
             flex: 1;
             max-width: 800px;
@@ -125,13 +167,13 @@
                 margin-bottom: 0;
             }
 
-        /* Подвал */
+        /* ===== Footer (Task 8) ===== */
         footer {
             background-color: var(--text-dark);
             color: var(--text-light);
-            text-align: center;
+            text-align: center; /* Center the copyright text */
             padding: 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Slightly smaller than the main 1rem text */
             margin-top: auto;
         }
 
@@ -159,44 +201,62 @@
 <body>
 
     <header>
-        <!-- Ссылка на картинку. Убедитесь, что файл logo.png лежит рядом с index.html -->
-        <img src="img/Kopejka.png" alt="Логотип Копеечка" class="logo">
-        <h1 class="site-title">Копеечка</h1>
+        <!-- Task 1: College name, placeholder logo, and navigation links -->
+        <div id="header">
+            <div class="header-brand">
+                <!-- Placeholder logo: replace with your own image if needed -->
+                <img src="img/placeholder-logo.png" alt="College Logo" class="logo">
+                <div>
+                    <h1 class="site-title">Kopeechka</h1>
+                    <p class="college-name">Polotsk State Economic College (PGEK)</p>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero-section">
-            <h2>Добро пожаловать в «Копеечку»!</h2>
-            <p>Мы — сеть магазинов у дома, где каждый найдет для себя необходимые товары по самым доступным ценам. Наша главная цель — чтобы ваши покупки были не только выгодными, но и приятными, а полки всегда радовали свежими продуктами и качественными товарами.</p>
+            <h2>Welcome to Kopeechka!</h2>
+            <p>We are a chain of neighborhood stores where everyone can find the necessary goods at the most affordable prices. Our main goal is to make your shopping not only profitable but also enjoyable, and the shelves always delight you with fresh products and quality goods.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Низкие цены</h3>
-                    <p>Ежедневно мы снижаем цены на сотни популярных товаров, чтобы вы могли экономить без ущерба для качества.</p>
+                    <h3>Low Prices</h3>
+                    <p>Every day we lower prices on hundreds of popular products so you can save without compromising on quality.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Свежие продукты</h3>
-                    <p>Свежая выпечка, молочные продукты и мясо каждый день. Мы внимательно следим за сроками годности.</p>
+                    <h3>Fresh Products</h3>
+                    <p>Fresh pastries, dairy products, and meat every day. We carefully monitor expiration dates.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Рядом с домом</h3>
-                    <p>Широкая сеть магазинов по всей стране. За необходимыми продуктами не нужно ехать далеко.</p>
+                    <h3>Close to Home</h3>
+                    <p>A wide network of stores across the country. You don't have to travel far for essential products.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Акции и скидки</h3>
-                    <p>Регулярные акции, дисконтные карты и специальные предложения для наших постоянных покупателей.</p>
+                    <h3>Promotions & Discounts</h3>
+                    <p>Regular promotions, discount cards, and special offers for our regular customers.</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Task 8: Footer styles (centered copyright, smaller font) -->
     <footer>
-        <p><strong>Сеть магазинов «Копеечка»</strong></p>
-        <p>&copy; 2024 Все права защищены.</p>
+        <p><strong>Kopeechka Store Network</strong></p>
+        <p>&copy; 2024 All rights reserved.</p>
         <div class="footer-links">
-            <a href="#">О нас</a>
-            <a href="#">Вакансии</a>
-            <a href="#">Контакты</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Contacts</a>
         </div>
     </footer>
 
