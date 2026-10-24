@@ -6,10 +6,11 @@
     <title>Kopeechka Store near PGEK in Polotsk</title>
     <style>
         :root {
-            --primary-color: #e30613; /* Kopeechka corporate red */
-            --secondary-color: #f9a825; /* Accent yellow */
+            --primary-color: #e30613;
+            --secondary-color: #f9a825;
             --text-color: #333;
             --bg-color: #f4f6f9;
+            --tg-color: #229ED9;
         }
 
         body {
@@ -112,6 +113,74 @@
                 color: #000;
             }
 
+        /* Developers section */
+        .developers-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .developers-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 1.2rem 0;
+            text-align: center;
+        }
+
+        .dev-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.9rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+            .dev-card:hover {
+                box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+                transform: translateY(-1px);
+            }
+
+        .dev-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #222;
+        }
+
+        .dev-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            font-size: 0.95rem;
+        }
+
+            .dev-contacts a {
+                text-decoration: none;
+                color: #444;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.3rem;
+                transition: color 0.2s;
+            }
+
+                .dev-contacts a:hover {
+                    color: var(--primary-color);
+                }
+
+            .dev-contacts .tg-link {
+                color: var(--tg-color);
+                font-weight: 600;
+            }
+
+                .dev-contacts .tg-link:hover {
+                    color: #1a7fb0;
+                    text-decoration: underline;
+                }
+
         footer {
             text-align: center;
             padding: 1rem;
@@ -151,6 +220,51 @@
             <span class="label">Opening Hours:</span>
             <div class="value" style="font-size: 1.1rem; font-weight: normal;">
                 Daily: 09:00 AM – 10:00 PM
+            </div>
+        </div>
+
+        <!-- Developers Section -->
+        <div class="developers-section">
+            <h2 class="developers-title">Developers</h2>
+
+            <div class="dev-card">
+                <div class="dev-name">Egor Safronenko</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375291234567">+375 (29) 123-45-67</a>
+                    <a href="https://t.me/username1" target="_blank" class="tg-link">@username1</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Daniil Yanusov</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375292345677">+375 (29) 234-56-77</a>
+                    <a href="https://t.me/username2" target="_blank" class="tg-link">@username2</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Maria Smirnova</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375293456789">+375 (29) 345-67-89</a>
+                    <a href="https://t.me/username3" target="_blank" class="tg-link">@username3</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Daniil Lemeshev</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375334567890">+375 (33) 456-78-90</a>
+                    <a href="https://t.me/username4" target="_blank" class="tg-link">@username4</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Ilya Egorov</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375335678901">+375 (33) 567-89-01</a>
+                    <a href="https://t.me/username5" target="_blank" class="tg-link">@username5</a>
+                </div>
             </div>
         </div>
     </main>
