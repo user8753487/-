@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopeechka Store near PGEK in Polotsk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #e30613; /* Kopeechka corporate red */
-            --secondary-color: #f9a825; /* Accent yellow */
-            --text-color: #333;
+            --primary-color: #e30613;
+            --secondary-color: #f9a825;
+            --text-color: #1a1a1a;
             --bg-color: #f4f6f9;
+            --tg-color: #229ED9;
+            --muted: #6b7280;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
@@ -21,27 +26,36 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         header {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
             header h1 {
+                font-family: 'Space Grotesk', sans-serif;
                 margin: 0;
-                font-size: 2.5rem;
+                font-size: 3.2rem;
+                font-weight: 700;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: -1.5px;
+                line-height: 1;
             }
 
             header p {
-                margin: 0.5rem 0 0 0;
-                font-size: 1.1rem;
+                font-family: 'Inter', sans-serif;
+                margin: 1rem 0 0 0;
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 0.3px;
                 opacity: 0.9;
+                text-transform: uppercase;
             }
 
         main {
@@ -68,24 +82,29 @@
             }
 
         .label {
-            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            color: #777;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: var(--muted);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.6rem;
             display: block;
         }
 
         .value {
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.4;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.35;
+            letter-spacing: -0.3px;
         }
 
             .value a {
                 color: var(--primary-color);
                 text-decoration: none;
                 transition: color 0.2s;
+                font-weight: 700;
             }
 
                 .value a:hover {
@@ -94,12 +113,16 @@
                 }
 
         .btn-call {
+            font-family: 'Space Grotesk', sans-serif;
             display: inline-block;
             background-color: var(--secondary-color);
             color: #000;
-            padding: 0.8rem 1.5rem;
+            padding: 0.9rem 1.8rem;
             border-radius: 30px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             text-decoration: none;
             margin-top: 0.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -112,10 +135,85 @@
                 color: #000;
             }
 
+        /* Developers section */
+        .developers-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .developers-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0 0 1.2rem 0;
+            text-align: center;
+        }
+
+        .dev-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.9rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+            .dev-card:hover {
+                box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+                transform: translateY(-1px);
+            }
+
+        .dev-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.4rem;
+            color: #222;
+        }
+
+        .dev-contacts {
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.4rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+            .dev-contacts a {
+                text-decoration: none;
+                color: #444;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.3rem;
+                transition: color 0.2s;
+            }
+
+                .dev-contacts a:hover {
+                    color: var(--primary-color);
+                }
+
+            .dev-contacts .tg-link {
+                color: var(--tg-color);
+                font-weight: 700;
+            }
+
+                .dev-contacts .tg-link:hover {
+                    color: #1a7fb0;
+                    text-decoration: underline;
+                }
+
         footer {
+            font-family: 'Inter', sans-serif;
             text-align: center;
             padding: 1rem;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
             color: #888;
             background-color: #eaeaea;
         }
@@ -151,6 +249,50 @@
             <span class="label">Opening Hours:</span>
             <div class="value" style="font-size: 1.1rem; font-weight: normal;">
                 Daily: 09:00 AM – 10:00 PM
+            </div>
+        </div>
+
+        <!-- Developers Section -->
+        <div class="developers-section">
+            <h2 class="developers-title">Developers</h2>
+
+            <div class="dev-card">
+                <div class="dev-name">Egor Safronenko</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375291234567">+375 (29) 123-45-67</a>
+                    <a href="https://t.me/username1" target="_blank" class="tg-link">@username1</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Daniil Yanusov</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375292345677">+375 (29) 234-56-77</a>
+                    <a href="https://t.me/username2" target="_blank" class="tg-link">@username2</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Maria Smirnova</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375293456789">+375 (29) 345-67-89</a>
+                    <a href="https://t.me/username3" target="_blank" class="tg-link">@username3</a>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-name">Daniil Lemeshev</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375334567890">+375 (33) 456-78-90</a>
+                    <a href="https://t.me/username4" target="_blank" class="tg-link">@username4</a>
+                </div>
+            </div>
+            <div class="dev-card">
+                <div class="dev-name">Ilya Egorov</div>
+                <div class="dev-contacts">
+                    <a href="tel:+375335678901">+375 (33) 567-89-01</a>
+                    <a href="https://t.me/username5" target="_blank" class="tg-link">@username5</a>
+                </div>
             </div>
         </div>
     </main>
