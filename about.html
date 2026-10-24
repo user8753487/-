@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Наша команда</title>
+    <!-- Подключение новых шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800&family=Rubik:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e30613; /* фирменный красный */
+            --secondary-color: #f9a825; /* акцентный жёлтый */
+            --text-color: #333;
+            --bg-color: #f4f6f9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+            header h1 {
+                font-family: 'Unbounded', sans-serif;
+                margin: 0;
+                font-size: 2.5rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+            }
+
+            header p {
+                font-family: 'Rubik', sans-serif;
+                margin: 0.8rem 0 0 0;
+                font-size: 1.1rem;
+                font-weight: 400;
+                opacity: 0.9;
+                letter-spacing: 0.5px;
+            }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 90%;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #777;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* ---------- Сетка карточек ---------- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .person-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .person-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+            }
+
+        /* ---------- Блок изображения ---------- */
+        .photo {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #ddd;
+        }
+
+            .photo svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.35s ease;
+            }
+
+        .person-card:hover .photo svg {
+            transform: scale(1.06);
+        }
+
+        .photo .initial {
+            font-family: 'Unbounded', sans-serif;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .person-body {
+            padding: 1rem 0.9rem 1.25rem;
+        }
+
+        .person-name {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.6rem;
+            color: #1a1a1a;
+            letter-spacing: -0.3px;
+        }
+
+        .person-age {
+            font-family: 'JetBrains Mono', monospace;
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #000;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.35rem 0.9rem;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            font-family: 'Rubik', sans-serif;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #888;
+            background-color: #eaeaea;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            main {
+                padding: 1.25rem;
+            }
+
+            .team-grid {
+                gap: 1rem;
+            }
+
+            .person-name {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>О нас</h1>
+        <p>Наша команда — 5 человек</p>
+    </header>
+
+    <main>
+        <div class="section-title">Состав команды</div>
+
+        <div class="team-grid">
+
+            <!-- 1. Лемешев Даниил Павлович, 18 -->
+            <article class="person-card">
+                <div class="photo">
+                    <svg viewBox="0 0 300 300" role="img" aria-label="Фото: Лемешев Даниил Павлович">
+                        <defs>
+                            <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#e30613" />
+                                <stop offset="100%" stop-color="#8e0410" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="300" fill="url(#grad1)" />
+                        <circle cx="150" cy="112" r="46" fill="rgba(255,255,255,0.92)" />
+                        <path d="M55 300 C55 216 100 186 150 186 C200 186 245 216 245 300 Z"
+                              fill="rgba(255,255,255,0.92)" />
+                    </svg>
+                    <span class="initial">Л</span>
+                </div>
+                <div class="person-body">
+                    <div class="person-name">Лемешев<br>Даниил Павлович</div>
+                    <span class="person-age">18 лет</span>
+                </div>
+            </article>
+
+            <!-- 2. Янусов Даниил, 17 -->
+            <article class="person-card">
+                <div class="photo">
+                    <svg viewBox="0 0 300 300" role="img" aria-label="Фото: Янусов Даниил">
+                        <defs>
+                            <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#f9a825" />
+                                <stop offset="100%" stop-color="#c46b00" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="300" fill="url(#grad2)" />
+                        <circle cx="150" cy="112" r="46" fill="rgba(255,255,255,0.92)" />
+                        <path d="M55 300 C55 216 100 186 150 186 C200 186 245 216 245 300 Z"
+                              fill="rgba(255,255,255,0.92)" />
+                    </svg>
+                    <span class="initial">Я</span>
+                </div>
+                <div class="person-body">
+                    <div class="person-name">Янусов<br>Даниил</div>
+                    <span class="person-age">17 лет</span>
+                </div>
+            </article>
+
+            <!-- 3. Егоров Илья, 17 -->
+            <article class="person-card">
+                <div class="photo">
+                    <svg viewBox="0 0 300 300" role="img" aria-label="Фото: Егоров Илья">
+                        <defs>
+                            <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#2d6cdf" />
+                                <stop offset="100%" stop-color="#16357a" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="300" fill="url(#grad3)" />
+                        <circle cx="150" cy="112" r="46" fill="rgba(255,255,255,0.92)" />
+                        <path d="M55 300 C55 216 100 186 150 186 C200 186 245 216 245 300 Z"
+                              fill="rgba(255,255,255,0.92)" />
+                    </svg>
+                    <span class="initial">Е</span>
+                </div>
+                <div class="person-body">
+                    <div class="person-name">Егоров<br>Илья</div>
+                    <span class="person-age">17 лет</span>
+                </div>
+            </article>
+
+            <!-- 4. Сафроненко Егор, 17 -->
+            <article class="person-card">
+                <div class="photo">
+                    <svg viewBox="0 0 300 300" role="img" aria-label="Фото: Сафроненко Егор">
+                        <defs>
+                            <linearGradient id="grad4" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#16a085" />
+                                <stop offset="100%" stop-color="#0a5c4c" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="300" fill="url(#grad4)" />
+                        <circle cx="150" cy="112" r="46" fill="rgba(255,255,255,0.92)" />
+                        <path d="M55 300 C55 216 100 186 150 186 C200 186 245 216 245 300 Z"
+                              fill="rgba(255,255,255,0.92)" />
+                    </svg>
+                    <span class="initial">С</span>
+                </div>
+                <div class="person-body">
+                    <div class="person-name">Сафроненко<br>Егор</div>
+                    <span class="person-age">17 лет</span>
+                </div>
+            </article>
+
+            <!-- 5. Смирнова Маша, 18 -->
+            <article class="person-card">
+                <div class="photo">
+                    <svg viewBox="0 0 300 300" role="img" aria-label="Фото: Смирнова Маша">
+                        <defs>
+                            <linearGradient id="grad5" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#8e44ad" />
+                                <stop offset="100%" stop-color="#552270" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="300" fill="url(#grad5)" />
+                        <circle cx="150" cy="112" r="46" fill="rgba(255,255,255,0.92)" />
+                        <path d="M55 300 C55 216 100 186 150 186 C200 186 245 216 245 300 Z"
+                              fill="rgba(255,255,255,0.92)" />
+                    </svg>
+                    <span class="initial">М</span>
+                </div>
+                <div class="person-body">
+                    <div class="person-name">Смирнова<br>Маша</div>
+                    <span class="person-age">18 лет</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Страница «О нас». Все права защищены.
+    </footer>
+
+</body>
+</html>
