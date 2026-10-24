@@ -1,14 +1,18 @@
 /* Общие настройки страницы */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
-    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff9f0; /* Слегка желтоватый фон, как в магазине */
     color: #333;
 }
 
+/* Главный заголовок */
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: #cc0000; /* Фирменный красный */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Карточки разработчиков */
@@ -17,40 +21,33 @@ h1 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-left: 5px solid #3498db; /* Синяя полоска слева */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 6px solid #cc0000; /* Красная полоска слева */
 }
 
+/* Заголовки внутри карточек */
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #ecf0f1;
+    color: #333;
+    border-bottom: 2px dashed #ffcc00; /* Желтый пунктир, как на ценниках */
     padding-bottom: 10px;
     margin-top: 0;
 }
 
-ul {
-    margin-top: 10px;
-    list-style-type: square;
-}
-
-li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
+/* Названия проектов */
 .project-name {
     font-weight: bold;
-    color: #2980b9;
+    color: #cc0000; /* Красный текст */
 }
 
-/* Стили для НОВОГО проекта (выделяем красным) */
+/* Выделение нового проекта */
 .new-project {
-    border-left: 5px solid #e74c3c; /* Красная полоска */
-    background-color: #fffdfd;
+    border-left: 6px solid #ffcc00; /* Желтая полоска для нового */
+    background-color: #fffdf5;
 }
 
+/* Бейдж NEW */
 .new-badge {
-    background-color: #e74c3c;
+    background-color: #cc0000;
     color: white;
     padding: 3px 10px;
     border-radius: 12px;
@@ -59,29 +56,31 @@ li {
     vertical-align: middle;
 }
 
-/* Стили для кнопки скачивания */
+/* Кнопка скачивания */
 .download-btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #27ae60; /* Зеленая кнопка */
-    color: white;
+    background-color: #ffcc00; /* Желтая кнопка */
+    color: #cc0000; /* Красный текст */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    border: 2px solid #cc0000; /* Красная рамка */
 }
 
     .download-btn:hover {
-        background-color: #219150; /* Темнеет при наведении */
+        background-color: #e6b800; /* Чуть темнее при наведении */
     }
 
-/* Стили для подвала сайта (футера) */
+/* Подвал сайта (Футер) */
 footer {
-    text-align: center; /* Текст по центру */
-    margin-top: 40px; /* Отступ сверху от последнего блока */
-    padding: 20px; /* Внутренние отступы */
-    color: #7f8c8d; /* Серый цвет текста */
-    font-size: 0.9em; /* Чуть меньший размер шрифта */
-    border-top: 1px solid #dcdde1; /* Серая линия сверху */
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #cc0000; /* Красный подвал */
+    color: white; /* Белый текст */
+    font-size: 1em;
+    border-radius: 8px;
 }
